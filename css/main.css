@@ -20,7 +20,7 @@ body {
 	width: 659px;
 	height: 494px;
 }
-.ryu-still, .ryu-ready, .ryu-throwing, .ryu-cool {
+.ryu-still, .ryu-ready, .ryu-throwing, .ryu-cool, .street-fighter {
 	width: 659px;
 	height: 494px;
 }
@@ -39,9 +39,15 @@ body {
 .ryu-cool {
 	background-image: url('../images/ryu-cool.gif')
 }
-.hadouken, .ryu-still, .ryu-ready, .ryu-throwing, .ryu-cool {
+.hadouken, .ryu-still, .ryu-ready, .ryu-throwing, .ryu-cool, .street-fighter {
 	background-repeat: no-repeat;
 }
+.street-fighter {
+	float: right;
+	background-image: url('../images/sfv_beta_restart.gif');
+	display: none;
+}
+
 .hadouken {
 	background-image: url('../images/hadouken.gif');
 	width: 156px;

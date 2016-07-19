@@ -26,7 +26,7 @@ $(document).ready(function() {
 		$('.ryu-ready').hide();
 		$('.ryu-throwing').hide();
 	});
-	$(document).keydown(function(e) {
+	$(document).keydown(function keyDown(e) {
 		if (e.keyCode == 88) {
 			$('.ryu-still').hide();
 			$('.ryu-ready').hide();
@@ -34,12 +34,22 @@ $(document).ready(function() {
 			$('.ryu-cool').show();
 		};
 	});
-	function playHadouken(){
-		$('#hadouken-sound')[0].volume = 0.5;
-		$('#hadouken-sound')[0].load();
-		$('#hadouken-sound')[0].play();
-	}
-
+	$(document).keyup(function keyUp(e) {
+		if (e.keyCode == 88) {
+			$('.ryu-ready').hide();
+			$('.ryu-throwing').hide();
+			$('.ryu-cool').hide();
+			$('.ryu-still').show();
+		}
+	});
+	$('.street-fighter').fadeIn(
+		3500,
+		function(){}
+	);
 });
-
+function playHadouken(){
+	$('#hadouken-sound')[0].volume = 0.5;
+	$('#hadouken-sound')[0].load();
+	$('#hadouken-sound')[0].play();
+}
 

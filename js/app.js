@@ -25,7 +25,15 @@ $(document).ready(function() {
 		$('.ryu-still').show();
 		$('.ryu-ready').hide();
 		$('.ryu-throwing').hide();
-	})
+	});
+	$(document).keydown(function(e) {
+		if (e.keyCode == 88) {
+			$('.ryu-still').hide();
+			$('.ryu-ready').hide();
+			$('.ryu-throwing').hide();
+			$('.ryu-cool').show();
+		};
+	});
 	function playHadouken(){
 		$('#hadouken-sound')[0].volume = 0.5;
 		$('#hadouken-sound')[0].load();
@@ -33,3 +41,5 @@ $(document).ready(function() {
 	}
 
 });
+
+
